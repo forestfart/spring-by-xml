@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="helloBean" class="main.HelloWorld">
+		<property name="name" value="Michal" />
+		<property name="printer">
+			<ref local="polishPrinter"/>
+		</property>
+	</bean>
+	
+	<bean id="englishPrinter" class="main.EnglishGreeting"/>
+	<bean id="polishPrinter" class="main.PolishGreeting"/>
+
+</beans>
